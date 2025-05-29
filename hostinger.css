@@ -78,18 +78,21 @@ header {
     display: none;
 }
 
-/* ------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------- */
+
 
 .content-hero{
     display: flex;
     flex-direction: row;
     color: #2f1c6a;
-    max-width: 1392px;
-    max-height: 500px;
     padding-top: 36px;
+    max-height: 700px;
     padding-bottom: 96px;
-    margin:auto;
+    margin-left: 112px;
+    margin-top: 100px;
     gap: 62px;
+    justify-content: center;
 }
 
 .content-hero-left{
@@ -97,7 +100,7 @@ header {
     flex-direction: column;
     max-width: 440px;
     max-height: 442px;
-    margin-top: 32px;
+    margin-top: 3px;
 }
 
 .content-hero-right{
@@ -105,8 +108,7 @@ header {
 }
 
 .img-hero{
-    width: 880;
-    height: 876px;
+    width: 100%;
 }
 
 .title-hero{
@@ -120,7 +122,6 @@ header {
     font-size: 20px;
     font-weight: 700;
     margin-top: 4px;
-    margin-bottom: 4px;
     font-weight: bold;
 }
 
@@ -164,7 +165,6 @@ header {
     font-size: 20px;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 4px;
 }
 
 .squares-hero{
@@ -172,7 +172,6 @@ header {
     flex-direction: row;
     gap: 11px;
     margin-top: 25px;
-    margin-bottom: 0px;
 }
 
 .button-hero{
@@ -198,10 +197,11 @@ header {
 
 .img-hero{
     display: flex;
-    margin-top: 18px;
-    margin-bottom: 12px;
+    margin-top: 9px;
+    margin-left: 5px;
     max-width: 880px;
     max-height: 576px;
+    overflow: hidden;
 }
 
 .img{
@@ -211,23 +211,21 @@ header {
 
 .garantia-hero{
     display: flex;
-    margin-top: 4px;
+    margin-top: 15px;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------- EMPIEZA STYLE MIGRACION ----------------------------------------------- */
 
 .content-migracion{
-    height: 700px;
     background-color: #1e1345;
     color: white;
     padding: 73px 120px;
-    margin-top: 20px;
 }
 
 .heading-migracion{
     margin: auto;
     text-align: center;
-    max-width: 1150px;
+    max-width: 1128px;
 }
 
 .title-migracion{
@@ -236,24 +234,28 @@ header {
 }
 
 .subtitle-migracion{
+    margin: 18px 0;
     line-height: 24px;
 }
 
 .content-cards{
     display: flex;
-    justify-content: center;
     gap: 25px;
     line-height: 24px;
     margin-top: 45px;
+    align-items: stretch;
+    max-width: 1128px;
+    margin: auto;
 }
 
 .cards{
     flex: 1;
-    width: 360px;
-    height: 256px;
     background-color: #2f1c6a;
     padding: 32px;
     border-radius: 16px;
+    flex-direction: column; 
+    width: 360px;
+    height: 256px;
 }
 
 .cont-icon-cards{
@@ -284,37 +286,24 @@ header {
     display: flex;
     justify-content: center; 
     margin: 30px 0;
+    width: 100%;
+    height: 100%;
 }
 
 .my-button-migracion{
-    padding: 0px 48px;
+    padding: 12px 48px;
     background-color: #673de6;
     border-radius: 8px;
-    height: 48px;
     border: none;
     font-size: 16px;
     font-weight: bolder;
     cursor: pointer; 
-    text-align: center;
+    width: 168px;
+    height: 48px;
+    text-align: center; 
 }
 
-
-.Ask-Kodee {
-    font-weight: bold;
-    background-color: #673de6;
-    color: white;
-    border-radius: 100px;
-    padding: 8px 14px 8px 8px;
-    border: none;
-    gap: 8px;
-    align-items: center;
-    display: flex;
-    position: fixed;
-    bottom: 14px;
-    right: 14px;
-} 
-
-/* ----------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------- EMPIEZA STYLE FOOTER ----------------------------------------------- */
 
 footer{
     background-color: #f4f5ff;
@@ -410,10 +399,9 @@ footer{
     margin: auto;
 }
 
-/* --------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- MEDIA QUERIES -------------------------------------------------- */
 
-@media screen and (max-width: 480px) {
-    
+@media screen and (max-width: 480px){
     body {
         width: 480px;
         margin: 0;
@@ -487,17 +475,16 @@ footer{
     }
 
 
-
-/* ------------------------------------------------------------------------- */
-
-
+/* ---------- HERO ---------- */
     .content-hero{
         display: flex;
         flex-direction: column;
         margin: 0px;
+        margin-top: 80px ;
+        
         padding: 0px 16px;
         max-width: 480px;
-        max-height: 765px;
+        max-height: 950px;
     }
 
     .title-hero{
@@ -538,12 +525,13 @@ footer{
 
     .img-hero{
         padding-bottom: 12px;
+        margin-top: 50px;
         width: 100%;
         height: 100%;
     }
-/* --------------------------------------------------------------------------------------------------------------- */
 
-.content-migracion {
+/* ---------- MIGRACION ---------- */
+    .content-migracion {
         display: flex;
         flex-direction: column;
         width: 480px;
@@ -618,10 +606,8 @@ footer{
     height: 48px;
     }
 
-
-/* ----------------------------------------------------------------------------------------- */
-
-footer{
+/* ---------- FOOTER ---------- */
+    footer{
         padding: 0 16px;
     }
 
@@ -671,7 +657,7 @@ footer{
         justify-content: flex-start;
         gap: 20px;
         flex-wrap: wrap;
-
+        
     }
 
     .content-bottom-footer{
@@ -683,7 +669,10 @@ footer{
         padding: 24px 0px 26px;
     }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+
+/* --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
 
     body {
         width: 768px;
@@ -719,7 +708,7 @@ footer{
     }
 
     .header-content-right {
-        margin-left: 520px;
+        margin-left: 450px;
         margin-right: 0px;
         gap: 5px;
     }
@@ -754,16 +743,15 @@ footer{
         height: 24px;
     }
 
+    /* ------------------------------------------------------------------ */
 
-/* ------------------------------------------------------------------------------------------------------------------- */
-
-.content-hero{
+    .content-hero{
         display: flex;
         flex-direction: column;
         margin: 0px;
         padding: 0px 16px;
         max-width: 768px;
-        max-height: 860px;
+        max-height: 1200px;
     }
 
     .content-hero-left{
@@ -793,7 +781,7 @@ footer{
     }
 
     .squares-hero{
-        flex-direction: row;
+        flex-direction: column-reverse;
     }
 
     .button-hero{
@@ -814,7 +802,7 @@ footer{
         height: 100%;
     }
 
-/* ---------------------------------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
     .content-migracion {
         width: 768px;
@@ -888,21 +876,76 @@ footer{
         border-radius: 6px;
         height: 48px;
         }
-}
-/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
 
-@media screen and (min-width: 769px) and (max-width: 1279px){
-    
-    
+    .content-top-footer{
+        flex-direction: column;
+    }
+
+    .content-footer-first{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .hostinger-footer{
+        margin-top: 30px;
+    }
+
+    .iconSM-footer{
+        display: flex;
+        justify-content: space-between; 
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .content-footer-second{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .cards-footer {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 12px; 
+        width: 300px;
+        height: 88px;
+        margin-right: auto;
+    }
+
+    .card-footer{
+        width: 60px;
+        height: 40px;
+    }
+
+    .legal-footer{
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    .content-bottom-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; 
+        gap: 25px;
+        padding: 24px 0px 26px;
+}
+}
+@media screen and (max-width:1024px) {
     body {
-        width: 1279px;
+        width: 1024px;
         margin: 0;
         padding: 0;
     }
 
     header {
-        width: 1279px;
-        height: 80px;
+        width: 1024px;
+        height: 62px;
     }
 
     .header-logo-hostinger{
@@ -912,109 +955,104 @@ footer{
     }
 
     .h-svgo-icon--logo {
-        width: 142px;
-        height: 28px;
-        margin-left: 14px;
+        width: 147px;
+        height: 30px;
+        margin-left: 4px;
         margin-top: 1;
     }
 
     .header-content-left {
-        align-items: center;
-        display: flex;
-        /* max-width: 730px; */
-        max-height: 24px;
-        padding: 22px 32px;
-        line-height: 1;
+        display: none;
+        color: transparent;
     }
 
-    .nav-header {
-        font-size: 14px;
+    .bi-chevron-down{
+        display: none;
     }
 
     .header-content-right {
-        margin-left: 330px;
+        margin-left: 770px;
         margin-right: 0px;
         gap: 5px;
     }
 
     .header-flag {
-        width: 30px;
-        height: 18px;
-    }
-
-    .header-language{
-        font-size: 14px;
-        font-weight: 700;
-        margin-bottom: auto;
-    }
-
-    .header-bandera {
-        font-weight: 700;
-    }
-
-    .header-login-buttom {
-        font-weight: 700;
-        border: 2px solid black;
-        border-radius: 8px;
-        padding: 12px 18px;
-        margin-left: 20px;
-    }
-
-    .bi-list-header-button{
         display: none;
     }
 
-    .bi-list-header {
+    .header-bandera {
+        display: none;
+    }
+
+    .header-login-buttom {
     display: none;
     }
 
-/* ------------------------------------------------------------------------------------------------ */
+    .header-contenedor-idioma {
+        display: none;
+    }
+
+    .bi-list-header-button{
+        background-color: #ffffff;
+        display: flex;
+        vertical-align: middle;
+        border: none;
+    }
+    
+    .bi-list-header {
+        display: flex;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+    }
+/* -------------------------------------------------------------------------------------------- */
 
     .content-hero{
         display: flex;
-        flex-direction: row;
-        margin-top: 40px;
-        margin-bottom: 50x;
-        padding: 40px 16px;
-        max-width: 1279px;
-        max-height: 700px;
-        
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 16px;
+        max-width: 1024px;
+        max-height: 1200px;
     }
 
     .content-hero-left{
-        width: 456px;
-        margin-left: 64px;
+        margin: auto;
+        margin-left: 160px;
+        max-width: 688px;
     }
 
     .title-hero{
-        font-size: 36px;
-        margin-top: 40px;
+        font-size: 28px;
+        margin-top: 84px;
     }
 
     .subtitle-hero{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .price-hero{
         font-size: 20px;
     }
 
+    .benefit-hero{
+        margin-top: 0px;
+    }
+
     .number-price{
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .month-hero{
-        font-size: 20px;
-    }
-
-    .garantia-hero{
-    display: flex;
-    font-size: 16px;
-    margin-top: 4px;
+        font-size: 18px;
     }
 
     .squares-hero{
         flex-direction: row;
+    }
+
+    .garantia-hero{
+        margin-top: 16px;
     }
 
     .button-hero{
@@ -1030,31 +1068,28 @@ footer{
     }
 
     .img-hero{
+        margin: auto;
         padding-bottom: 12px;
-        width: 616px;
-        height: 403px;
-        margin-right: 50px;
-        margin-top: 50px;
+        width: 100%;
+        height: 100%;
     }
 
-/* ----------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 
-        .content-migracion {
-        width: 1279px;
-        height: 650px;
+    .content-migracion {
+        width: 1024px;
+        height: 1104px;
         padding: 56px 0px;
-        margin-top: 100px;
     }
 
     .heading-migracion{
-        max-width: 1128px;
-        margin: 0px 10px 16px;
+        max-width: 688px;
+        margin: 0px 170px 16px;
         padding: 0px 16px;
-        margin: auto;
     }
 
     .title-migracion{
-        font-size: 36px;
+        font-size: 28px;
         margin-top: auto;
         white-space: nowrap;
         letter-spacing: 0px;
@@ -1068,16 +1103,16 @@ footer{
 
     .content-cards{
         display: flex;
-        flex-direction: row;
-        max-width: 1208px;
+        flex-direction: column;
+        margin: auto;
         padding: 16px;
-        margin: 0px 60px 0px 60px;
-        gap: 24px;
+        margin: 0px 150px 0px;
+        gap: 16px;
     }
 
     .cards{
-        width: 360px;
-        height: 256px;
+        width: 688px;
+        height: 208px;
         padding: 30px;
         margin-top: 10px
     }
@@ -1106,7 +1141,9 @@ footer{
         }
 
         .button-migracion{
-        margin: 16px 0px 0px;
+        width: 100px;
+        height: 100px;
+        margin: 16px 450px 0px;
         }
 
     .my-button-migracion{
@@ -1116,5 +1153,3 @@ footer{
         }
 
 }
-
-
